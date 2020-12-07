@@ -39,20 +39,22 @@
 </style>
 
 <template>
-  <div class="product__formEdit">
-    <h1>Редактирование карточки</h1>
-    <form action="#" class="formEdit">
-      <div class="formEdit__group">
-        <label for="name">Название</label>
-        <input type="text" id="name" v-model="name" />
-      </div>
-      <div class="formEdit__group">
-        <label for="description">Описание</label>
-        <input type="text" id="description" v-model="description" />
-      </div>
-      <button type="submit" @click.prevent="Edit">Edit</button>
-    </form>
-  </div>
+  <transition name="fade">
+    <div class="product__formEdit">
+      <h1>Редактирование карточки</h1>
+      <form action="#" class="formEdit">
+        <div class="formEdit__group">
+          <label for="name">Название</label>
+          <input type="text" id="name" v-model="name" />
+        </div>
+        <div class="formEdit__group">
+          <label for="description">Описание</label>
+          <input type="text" id="description" v-model="description" />
+        </div>
+        <button type="submit" @click.prevent="Edit">Edit</button>
+      </form>
+    </div>
+  </transition>
 </template>
 
 <script>
